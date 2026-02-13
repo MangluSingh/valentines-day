@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8 Days of Us — Valentine's Week 2026</title>
+    <style>
+        /* =========================================== */
+        /* VALENTINE'S WEEK 2026 - PREMIUM STYLES      */
+        /* CLEAN · ORGANIZED · CLICK TO OPEN           */
+        /* =========================================== */
+
+        /* ------------------------------------------- */
+        /* GLOBAL VARIABLES
+        /* ------------------------------------------- */
+        :root {
+            --deep-crimson: #590d22;
+            --romantic-red: #a4133c;
+            --gold: #d4af37;
+            --pure-white: #fff9fb;
+            --font-serif: 'Playfair Display', 'Times New Roman', serif;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-elegant: 'Cormorant Garamond', Georgia, serif;
+        }
+
+        /* ------------------------------------------- */
+        /* RESET & BASE
+        /* ------------------------------------------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: radial-gradient(circle at 30% 40%, #ffe6eb, #ffb3c1);
+            font-family: var(--font-serif);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            position: relative;
+            color: #2d1b1e;
+        }
+
+        /* ------------------------------------------- */
+        /* CINEMATIC OVERLAYS
+        /* ------------------------------------------- */
+        .grain {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url('data:image/svg+xml,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noise)" opacity="0.04"/></svg>');
+            pointer-events: none;
+            z-index: 999;
+            opacity: 0.2;
+            mix-blend-mode: multiply;
+        }
+
+        .vignette {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            box-shadow: inset 0 0 200px rgba(89, 13, 34, 0.2);
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        .ambient-grid {
+            position: fixed;
+            width: 100%; height: 100%;
+            background-image: 
+                linear-gradient(rgba(164, 60, 60, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(164, 60, 60, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+        }
+
+        /* ------------------------------------------- */
+        /* FLOATING PETALS
+        /* ------------------------------------------- */
+        .floating-petals {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .floating-petals span {
+            position: absolute;
+            font-size: 1.8rem;
+            opacity: 0.15;
+            animation: petalDrift 24s infinite linear;
+        }
+
+        .floating-petals span:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
+        .floating-petals span:nth-child(2) { top: 70%; left: 85%; animation-delay: 6s; }
+        .floating-petals span:nth-child(3) { top: 40%; left: 20%; animation-delay: 2s; }
+        .floating-petals span:nth-child(4) { top: 80%; left: 40%; animation-delay: 10s; }
+        .floating-petals span:nth-child(5) { top: 20%; left: 75%; animation-delay: 14s; }
+        .floating-petals span:nth-child(6) { top: 60%; left: 10%; animation-delay: 18s; }
+
+        @keyframes petalDrift {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0.1; }
+            50% { transform: translateY(-40px) rotate(120deg); opacity: 0.2; }
+            100% { transform: translateY(0) rotate(360deg); opacity: 0.1; }
+        }
+
+        /* ------------------------------------------- */
+        /* MAIN CARD - FLIP ANIMATION
+        /* ------------------------------------------- */
+        .card {
+            perspective: 2400px;
+            width: 100%;
+            max-width: 1000px;
+            min-height: 1300px;
+            z-index: 100;
+            position: relative;
+        }
+
+        .card__inner {
+            position: relative;
+            width: 100%;
+            min-height: 1300px;
+            transition: transform 0.9s cubic-bezier(0.23, 1, 0.32, 1);
+            transform-style: preserve-3d;
+            border-radius: 32px;
+            box-shadow: 0 40px 70px -20px rgba(89, 13, 34, 0.3);
+        }
+
+        .card__front, .card__back {
+            position: absolute;
+            width: 100%;
+            min-height: 1300px;
+            backface-visibility: hidden;
+            border-radius: 32px;
+            background: var(--pure-white);
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .card__front {
+            background: linear-gradient(145deg, #fff6f9, #ffe9ef);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .card__back {
+            transform: rotateY(180deg);
+            background: #fffcf7;
+        }
+
+        .flipped .card__inner {
+            transform: rotateY(180deg);
+        }
+
+        /* ------------------------------------------- */
+        /* WAX SEAL (FRONT)
+        /* ------------------------------------------- */
+        .wax-seal-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            animation: softFloat 5s infinite ease-in-out;
+        }
+
+        @keyframes softFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .wax-seal {
+            width: 160px;
+            height: 160px;
+            background: radial-gradient(circle at 30% 30%, #b76e79, #9d4e5a);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 15px 25px -5px rgba(128, 0, 32, 0.4);
+            border: 2px solid #e6b8af;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .wax-seal:hover {
+            transform: scale(1.05);
+        }
+
+        .wax-inner {
+            font-size: 56px;
+            color: #ffecf0;
+            text-shadow: 0 2px 5px #3b0d1a;
+            transform: rotate(-8deg);
+        }
+
+        .open-invite {
+            font-family: var(--font-sans);
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            font-size: 13px;
+            font-weight: 400;
+            color: var(--deep-crimson);
+            opacity: 0.7;
+            margin-top: 20px;
+        }
+
+        .front-subtle {
+            position: absolute;
+            bottom: 30px;
+            font-size: 15px;
+            font-weight: 300;
+            color: #b5838d;
+            letter-spacing: 2px;
+        }
+
+        /* ------------------------------------------- */
+        /* LETTER PAPER (BACK)
+        /* ------------------------------------------- */
+        .letter-paper {
+            padding: 3rem 2.5rem;
+            position: relative;
+            background: #fffcf7;
+            min-height: 1300px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .letter-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            font-family: var(--font-sans);
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #a05c6b;
+            border-bottom: 1px solid #ffe3e8;
+            padding-bottom: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .header-left {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .countdown {
+            font-size: 12px;
+            background: rgba(255,230,240,0.5);
+            padding: 4px 12px;
+            border-radius: 30px;
+            display: inline-block;
+        }
+
+        .header-right {
+            font-family: var(--font-serif);
+            font-style: italic;
+        }
+
+        /* ------------------------------------------- */
+        /* FLOATING MESSAGE TRIGGER
+        /* ------------------------------------------- */
+        .floating-message-trigger {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            box-shadow: 0 10px 25px -8px rgba(89,13,34,0.2);
+            border: 1px solid rgba(212,175,55,0.3);
+            cursor: pointer;
+            transition: all 0.3s;
+            z-index: 50;
+        }
+
+        .floating-message-trigger:hover {
+            transform: scale(1.05);
+            border-color: #d4af37;
+        }
+
+        .trigger-icon {
+            font-size: 24px;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        .trigger-text {
+            font-family: var(--font-sans);
+            font-size: 14px;
+            font-weight: 500;
+            color: #590d22;
+            letter-spacing: 1.5px;
+        }
+
+        /* ------------------------------------------- */
+        /* FLOATING QUOTE POPUP
+        /* ------------------------------------------- */
+        .floating-quote-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
+            width: 90%;
+            max-width: 500px;
+            z-index: 5000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            pointer-events: none;
+        }
+
+        .floating-quote-container.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, -50%) scale(1);
+            pointer-events: all;
+        }
+
+        .floating-quote-card {
+            background: linear-gradient(145deg, #fff5f7, #fff0f3);
+            border-radius: 32px;
+            padding: 40px 30px;
+            box-shadow: 0 30px 60px -20px rgba(89,13,34,0.4);
+            position: relative;
+            border: 1px solid rgba(212,175,55,0.3);
+        }
+
+        .quote-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: none;
+            background: rgba(89,13,34,0.1);
+            color: #590d22;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .quote-close:hover {
+            background: #590d22;
+            color: white;
+        }
+
+        .quote-emoji {
+            font-size: 56px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .quote-title {
+            font-family: var(--font-sans);
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            font-size: 12px;
+            color: #a05c6b;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .quote-message {
+            font-family: var(--font-elegant);
+            font-size: 24px;
+            line-height: 1.6;
+            color: #2d1b1e;
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .quote-signature {
+            font-family: var(--font-serif);
+            font-size: 20px;
+            color: #a4133c;
+            text-align: right;
+            font-weight: 700;
+        }
+
+        /* ------------------------------------------- */
+        /* PHOTO MOSAIC
+        /* ------------------------------------------- */
+        .memory-mosaic {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 16px;
+            margin-bottom: 2.5rem;
+        }
+
+        .mosaic-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 12px 24px -12px rgba(89,13,34,0.2);
+            aspect-ratio: 1 / 1;
+        }
+
+        .main-memory {
+            aspect-ratio: 1 / 1.2;
+            grid-row: span 2;
+        }
+
+        .memory-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(89,13,34,0.2), transparent);
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            padding: 16px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .mosaic-item:hover .image-overlay {
+            opacity: 1;
+        }
+
+        .overlay-icon {
+            color: white;
+            font-size: 24px;
+            background: rgba(255,255,255,0.3);
+            backdrop-filter: blur(4px);
+            padding: 8px;
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ------------------------------------------- */
+        /* LOVE LETTER
+        /* ------------------------------------------- */
+        .letter-body {
+            margin-bottom: 2rem;
+        }
+
+        .salutation {
+            font-size: 32px;
+            font-weight: 700;
+            color: #2d1b1e;
+            margin-bottom: 1.5rem;
+            font-family: var(--font-serif);
+            position: relative;
+            display: inline-block;
+        }
+
+        .salutation::after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 70px;
+            height: 2.5px;
+            background: var(--gold);
+            opacity: 0.6;
+        }
+
+        .message-container {
+            margin: 2rem 0;
+        }
+
+        .line {
+            font-size: 24px;
+            line-height: 1.7;
+            color: #372528;
+            font-style: italic;
+            font-family: var(--font-serif);
+            border-left: 4px solid #e6a4b1;
+            padding-left: 28px;
+        }
+
+        .signature-block {
+            margin-top: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .signature-label {
+            font-size: 17px;
+            color: #77525e;
+            font-family: var(--font-sans);
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+
+        .signature-name {
+            font-size: 36px;
+            font-weight: 700;
+            font-family: var(--font-serif);
+            color: #a4133c;
+            margin-top: 6px;
+            letter-spacing: 2px;
+        }
+
+        /* =========================================== */
+        /* VALENTINE'S WEEK - 8 CLICKABLE DAY CARDS    */
+        /* =========================================== */
+        .valentine-week {
+            margin: 3rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .week-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 600;
+            color: #590d22;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            font-family: var(--font-sans);
+        }
+
+        .week-title::before,
+        .week-title::after {
+            content: "✦";
+            margin: 0 16px;
+            color: #d4af37;
+            font-size: 20px;
+        }
+
+        .day-card {
+            border-radius: 20px;
+            background: white;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(89,13,34,0.08);
+            border: 1px solid rgba(255,255,255,0.5);
+            transition: all 0.3s ease;
+        }
+
+        .day-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 18px 24px;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(4px);
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .day-header:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .day-number {
+            font-size: 24px;
+            font-weight: 800;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            font-family: var(--font-sans);
+            min-width: 50px;
+        }
+
+        .day-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            font-family: var(--font-serif);
+        }
+
+        .day-date {
+            margin-left: auto;
+            font-size: 14px;
+            color: rgba(255,255,255,0.95);
+            font-family: var(--font-sans);
+            background: rgba(0,0,0,0.1);
+            padding: 5px 14px;
+            border-radius: 30px;
+            backdrop-filter: blur(4px);
+        }
+
+        .expand-icon {
+            font-size: 16px;
+            color: white;
+            transition: transform 0.3s ease;
+            margin-left: 8px;
+        }
+
+        .day-card.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+
+        .day-content {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 0 24px;
+        }
+
+        .day-card.expanded .day-content {
+            max-height: 400px;
+            opacity: 1;
+            padding: 24px;
+        }
+
+        .day-emoji-large {
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 16px;
+            filter: drop-shadow(0 8px 12px rgba(0,0,0,0.1));
+        }
+
+        .day-message p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: white;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+            margin-bottom: 12px;
+        }
+
+        .day-quote {
+            font-style: italic;
+            font-size: 16px;
+            color: rgba(255,255,255,0.95);
+            margin-top: 12px;
+            padding-left: 16px;
+            border-left: 3px solid rgba(255,255,255,0.6);
+        }
+
+        .day-gift {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 16px;
+            background: rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 40px;
+            backdrop-filter: blur(8px);
+        }
+
+        .gift-emoji {
+            font-size: 22px;
+        }
+
+        .gift-text {
+            font-size: 14px;
+            color: white;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .day-rose .day-header { background: #e84342; }
+        .day-rose .day-content { background: #e84342; }
+        .day-propose .day-header { background: #8e44ad; }
+        .day-propose .day-content { background: #8e44ad; }
+        .day-chocolate .day-header { background: #784421; }
+        .day-chocolate .day-content { background: #784421; }
+        .day-teddy .day-header { background: #b3694b; }
+        .day-teddy .day-content { background: #b3694b; }
+        .day-promise .day-header { background: #2980b9; }
+        .day-promise .day-content { background: #2980b9; }
+        .day-hug .day-header { background: #f39c12; }
+        .day-hug .day-content { background: #f39c12; }
+        .day-kiss .day-header { background: #e84393; }
+        .day-kiss .day-content { background: #e84393; }
+        .day-valentine .day-header { background: #c0392b; }
+        .day-valentine .day-content { background: #c0392b; }
+
+        /* ------------------------------------------- */
+        /* PROPOSAL AREA
+        /* ------------------------------------------- */
+        .proposal-area {
+            margin: 40px 0 30px;
+            padding: 30px;
+            background: linear-gradient(145deg, #fff9fb, #fff0f3);
+            border-radius: 40px;
+            text-align: center;
+            border: 1px solid rgba(212,175,55,0.2);
+        }
+
+        .divider {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+
+        .divider-icon {
+            font-size: 28px;
+            color: var(--gold);
+        }
+
+        .proposal-question {
+            font-size: 42px;
+            font-weight: 800;
+            font-family: var(--font-serif);
+            color: #590d22;
+            margin-bottom: 30px;
+            letter-spacing: -1px;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 18px 45px;
+            border: none;
+            border-radius: 60px;
+            font-size: 20px;
+            font-weight: 600;
+            font-family: var(--font-sans);
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn--yes {
+            background: linear-gradient(145deg, #ad1f3b, #7f1d36);
+            color: white;
+            box-shadow: 0 10px 20px -8px #590d22;
+        }
+
+        .btn--yes:hover {
+            transform: scale(1.05);
+        }
+
+        .btn-hearts {
+            font-size: 24px;
+            animation: heartbeat 1.2s infinite;
+        }
+
+        .btn--no {
+            background: white;
+            color: #6d4b4e;
+            border: 2px solid #e9b6c2;
+        }
+
+        .btn--no:hover {
+            background: rgba(255,220,230,0.5);
+        }
+
+        /* ------------------------------------------- */
+        /* FOOTER
+        /* ------------------------------------------- */
+        .letter-footer {
+            margin-top: auto;
+            padding-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            border-top: 2px dashed #eecfd5;
+        }
+
+        .footer-roses {
+            display: flex;
+            gap: 24px;
+            font-size: 24px;
+        }
+
+        .footer-text {
+            font-family: var(--font-elegant);
+            font-size: 16px;
+            color: #7a5c64;
+            font-style: italic;
+            text-align: center;
+        }
+
+        /* ------------------------------------------- */
+        /* CELEBRATION PORTAL
+        /* ------------------------------------------- */
+        .celebration-portal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, #ff99a5, #b33b4d);
+            z-index: 4000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.6s;
+            backdrop-filter: blur(10px);
+        }
+
+        .celebration-portal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .portal-content {
+            text-align: center;
+            color: white;
+            transform: scale(0.8);
+            transition: transform 0.8s;
+        }
+
+        .active .portal-content {
+            transform: scale(1);
+        }
+
+        .portal-title {
+            font-size: 80px;
+            font-weight: 900;
+            font-family: var(--font-serif);
+            text-transform: uppercase;
+            letter-spacing: 16px;
+            text-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            margin-bottom: 20px;
+        }
+
+        .portal-sub {
+            font-size: 30px;
+            font-weight: 300;
+            font-family: var(--font-sans);
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        .portal-hearts {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-size: 50px;
+            margin-top: 30px;
+        }
+
+        .gold-lines {
+            width: 200px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #ffe6aa, #d4af37, #ffe6aa, transparent);
+            margin: 0 auto 30px;
+        }
+
+        /* ------------------------------------------- */
+        /* RESPONSIVE
+        /* ------------------------------------------- */
+        @media (max-width: 768px) {
+            body { padding: 1rem; }
+            .letter-paper { padding: 2rem 1.5rem; }
+            .proposal-question { font-size: 32px; }
+            .btn { padding: 14px 30px; font-size: 18px; }
+            .portal-title { font-size: 48px; letter-spacing: 8px; }
+            .memory-mosaic { grid-template-columns: 1fr; }
+            .main-memory { aspect-ratio: 1 / 1; }
+            .day-header { flex-wrap: wrap; }
+            .day-date { margin-left: 0; }
+        }
+
+        @keyframes petalFall {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0.9; }
+            100% { transform: translateY(120vh) rotate(720deg); opacity: 0.1; }
+        }
+    </style>
+</head>
+<body>
+    <!-- CINEMATIC OVERLAYS -->
+    <div class="grain"></div>
+    <div class="vignette"></div>
+    
+    <!-- AMBIENT BACKGROUND -->
+    <div class="ambient-grid"></div>
+    <div class="floating-petals">
+        <span>🌸</span><span>🌹</span><span>🌺</span><span>🌸</span><span>🌷</span><span>🌹</span>
+    </div>
+
+    <!-- FLOATING QUOTE POPUP -->
+    <div class="floating-quote-container" id="floatingQuoteContainer">
+        <div class="floating-quote-card">
+            <button class="quote-close" id="quoteClose">✕</button>
+            <div class="quote-emoji">💌</div>
+            <div class="quote-title">a secret note, just for you</div>
+            <div class="quote-message" id="floatingQuoteMessage">
+                From the moment I met you, my world became brighter.
+            </div>
+            <div class="quote-signature">— forever yours</div>
+        </div>
+    </div>
+
+    <!-- MAIN CARD -->
+    <main class="card" id="card">
+        <div class="card__inner" id="cardInner">
+            
+            <!-- FRONT: WAX SEAL -->
+            <div class="card__front">
+                <div class="wax-seal-wrapper">
+                    <div class="wax-seal" id="waxSeal">
+                        <div class="wax-inner">💝</div>
+                    </div>
+                    <p class="open-invite">TOUCH TO OPEN</p>
+                </div>
+                <div class="front-subtle">— 14.02.2026 —</div>
+            </div>
+
+            <!-- BACK: THE LETTER -->
+            <div class="card__back">
+                <div class="letter-paper">
+                    
+                    <!-- HEADER -->
+                    <div class="letter-header">
+                        <div class="header-left">
+                            <span class="date">Valentine's Week · 2026</span>
+                            <span class="countdown" id="countdown"></span>
+                        </div>
+                        <div class="header-right">
+                            <span class="place">8 days of us</span>
+                        </div>
+                    </div>
+
+                    <!-- FLOATING MESSAGE TRIGGER -->
+                    <div class="floating-message-trigger" id="openQuoteBtn">
+                        <span class="trigger-icon">💌</span>
+                        <span class="trigger-text">open secret note</span>
+                    </div>
+
+                    <!-- PHOTO MOSAIC - YOUR MEMORIES -->
+                    <div class="memory-mosaic">
+                        <div class="mosaic-item main-memory">
+                            <img src="https://images.unsplash.com/photo-1522673607200-164d1b3ce470?w=600" 
+                                 alt="Us together" 
+                                 class="memory-image"
+                                 id="mainMemoryImage">
+                            <div class="image-overlay">
+                                <span class="overlay-icon">❤️</span>
+                            </div>
+                        </div>
+                        <div class="mosaic-item small-memory">
+                            <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=600" 
+                                 alt="Romantic moment" 
+                                 class="memory-image"
+                                 id="smallMemoryImage1">
+                            <div class="image-overlay">
+                                <span class="overlay-icon">🌹</span>
+                            </div>
+                        </div>
+                        <div class="mosaic-item small-memory">
+                            <img src="https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=600" 
+                                 alt="Sunset love" 
+                                 class="memory-image"
+                                 id="smallMemoryImage2">
+                            <div class="image-overlay">
+                                <span class="overlay-icon">✨</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LOVE LETTER -->
+                    <div class="letter-body">
+                        <h1 class="salutation">My Dearest Love,</h1>
+                        <div class="message-container">
+                            <p class="line">With you, every moment is magical...</p>
+                        </div>
+                        <div class="signature-block">
+                            <p class="signature-label">With all my love,</p>
+                            <p class="signature-name">Your Valentine ❤️</p>
+                        </div>
+                    </div>
+
+                    <!-- VALENTINE'S WEEK - 8 CLICKABLE DAY CARDS -->
+                    <div class="valentine-week">
+                        <h2 class="week-title">✦ eight days of us ✦</h2>
+                        
+                        <!-- DAY 1: ROSE DAY - 7 FEB -->
+                        <div class="day-card day-rose" id="day1">
+                            <div class="day-header" data-day="1">
+                                <span class="day-number">01</span>
+                                <span class="day-name">Rose Day</span>
+                                <span class="day-date">7 Feb 2026</span>
+                                <span class="expand-icon">▼</span>
+                            </div>
+                            <div class="day-content" id="dayContent1">
+                                <div class="day-emoji-large">🌹🌹🌹</div>
+                                <div class="day-message">
+                                    <p id="dayMessage1">A single rose for my one-of-a-kind love. You bloom in my heart every single day.</p>
+                                    <p class="day-quote" id="dayQuote1">"Like a rose, you make everything beautiful."</p>
+                                </div>
+                                <div class="day-gift">
+                                    <span class="gift-emoji">🌹</span>
+                                    <span class="gift-text" id="dayGift1">eternal bloom</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- DAY 2: PROPOSE DAY - 8 FEB -->
+                        <div class="day-card day-propose" id="day2">
+                            <div class="day-header" data-day="2">
+                                <span class="day-number">02</span>
+                                <span class="day-name">Propose Day</span>
+                                <span class="day-date">8 Feb 2026</span>
+                                <span class="expand-icon">▼</span>
+                            </div>
+                            <div class="day-content" id="dayContent2">
+                                <div class="day-emoji-large">💍✨💎</div>
+                                <div class="day-message">
+                                    <p id="dayMessage2">If I had to propose a million times, I'd choose you in every lifetime.</p>
+                                    <p class="day-quote" id="dayQuote2">"You are my always and forever."</p>
+                                </div>
+                                <div class="day-gift">
+                                    <span class="gift-emoji">💍</span>
+                                    <span class="gift-text" id="dayGift2">a promise</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- DAY 3: CHOCOLATE DAY - 9 FEB -->
+                        <div class="day-card day-chocolate" id="day3">
+                            <div class="day-header" data-day="3">
+                                <span class="day-number">03</span>
+                                <span class="day-name">Chocolate Day</span>
+                                <span class="day-date">9 Feb 2026</span>
+                                <span class="expand-icon">▼</span>
+                            </div>
+                            <div class="day-content" id="dayContent3">
+                                <div class="day-emoji-large">🍫🍬🍭</div>
+                                <div class="day-message">
+                                    <p id="dayMessage3">Sweet like chocolate, but you're naturally perfect without any sugar.</p>
+                                    <p class="day-quote" id="dayQuote3">"You're the sweetness I crave daily."</p>
+                                </div>
+                                <div class="day-gift">
+                                    <span class="gift-emoji">🍫</span>
+                                    <span class="gift-text" id="dayGift3">sweet love</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- DAY 4: TEDDY DAY - 10 FEB -->
+                        <div class="day-card day-teddy" id="day4">
+                            <div class="day-header" data-day="4">
+                                <span class="day-number">04</span>
+                                <span class="day-name">Teddy Day</span>
+                                <span class="day-date">10 Feb 2026</span>
+                                <span class="expand-icon">▼</span>
+                            </div>
+                            <div class="day-content" id="dayContent4">
+                                <div class="day-emoji-large">🧸🐻🎀</div>
+                                <div class="day-message">
+                                    <p id="dayMessage4">Soft like a teddy, but your hugs are warmer than any stuffed animal.</p>
+                                    <p class="day-quote" id="dayQuote4">"Cuddle buddies for life."</p>
+                                </div>
+                                <div class="day-gift">
+                                    <span class="gift-emoji">🧸</span>
+                                    <span class="gift-text" id="dayGift4">huggable</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- DAY 5: PROMISE DAY - 11 FEB -->
+                        <div class="day-card day-promise" id="day5">
+                            <div class="day-header" data-day="5">
+                                <span class="day-number">05</span>
+                                <span class="day-name">Promise Day</span>
+                                <span class="day-date">11 Feb 2026</span>
+                                <span class="expand-icon">▼</span>
+                            </div>
+                            <div class="day-content" id="dayContent5">
+                                <div class="day-emoji-large">🤝💫🤞</div>
+                                <div class="day-message">
+                                    <p id="dayMessage5">I promise to choose you, to cherish you, even on days we're apart.</p>
+                                    <p class="day-quote" id="dayQuote5">"Pinky promise: forever."</p>
+                                </div>
+                                <div class="day-gift">
+                                    <span class="gift-emoji">🤞</span>
+                                    <span class="gift-text" id="dayGift5">sealed with love</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- DAY 6: HUG DAY - 12 FEB -->
+                        <div class="day-card day-hug" id="day6">
+                            <div class="day-header" data-day="6">
+                                <span class="day-number">06</span>
+                                <span class="day-name">Hug Day</span>
+                                <span class="day-date">12 Feb 2026</span>
+                                <span class="expand-icon">▼</span>
+                            </div>
+                            <div class="day-content" id="dayContent6">
+                                <div class="day-emoji-large">🤗🫂💞</div>
+                                <div class="day-message">
+                                    <p id="dayMessage6">A hug from you is my safe place, my home, my favorite destination.</p>
+                                    <p class="day-quote" id="dayQuote6">"Free hugs for life — just for you."</p>
+                                </div>
+                                <div class="day-gift">
+                                    <span class="gift-emoji">🤗</span>
+                                    <span class="gift-text" id="dayGift6">warm embrace</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- DAY 7: KISS DAY - 13 FEB -->
+                        <div class="day-card day-kiss" id="day7">
+                            <div class="day-header" data-day="7">
+                                <span class="day-number">07</span>
+                                <span class="day-name">Kiss Day</span>
+                                <span class="day-date">13 Feb 2026</span>
+                                <span class="expand-icon">▼</span>
+                            </div>
+                            <div class="day-content" id="dayContent7">
+                                <div class="day-emoji-large">💋💋💋</div>
+                                <div class="day-message">
+                                    <p id="dayMessage7">Your kiss is poetry. Soft, meaningful, and leaves me wanting more.</p>
+                                    <p class="day-quote" id="dayQuote7">"Sealed with a kiss."</p>
+                                </div>
+                                <div class="day-gift">
+                                    <span class="gift-emoji">💋</span>
+                                    <span class="gift-text" id="dayGift7">sweetest kiss</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- DAY 8: VALENTINE'S DAY - 14 FEB -->
+                        <div class="day-card day-valentine" id="day8">
+                            <div class="day-header" data-day="8">
+                                <span class="day-number">08</span>
+                                <span class="day-name">Valentine's Day</span>
+                                <span class="day-date">14 Feb 2026</span>
+                                <span class="expand-icon">▼</span>
+                            </div>
+                            <div class="day-content" id="dayContent8">
+                                <div class="day-emoji-large">💝❤️💘</div>
+                                <div class="day-message">
+                                    <p id="dayMessage8">Today, tomorrow, and every day after — it's always been you.</p>
+                                    <p class="day-quote" id="dayQuote8">"You are my valentine, forever."</p>
+                                </div>
+                                <div class="day-gift">
+                                    <span class="gift-emoji">💝</span>
+                                    <span class="gift-text" id="dayGift8">my heart</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- THE PROPOSAL -->
+                    <div class="proposal-area">
+                        <div class="divider">
+                            <span class="divider-icon">✧</span>
+                            <span class="divider-icon">💝</span>
+                            <span class="divider-icon">✧</span>
+                        </div>
+                        
+                        <h2 class="proposal-question">Will you be my Valentine?</h2>
+
+                        <div class="button-group">
+                            <button class="btn btn--yes" id="yesBtn">
+                                <span class="btn-text">Yes, forever</span>
+                                <span class="btn-hearts">❤️</span>
+                            </button>
+                            <button class="btn btn--no" id="noBtn">
+                                <span class="btn-text">Not yet</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- FOOTER -->
+                    <div class="letter-footer">
+                        <div class="footer-roses">
+                            <span>🌹</span><span>💍</span><span>🍫</span><span>🧸</span>
+                            <span>🤞</span><span>🤗</span><span>💋</span><span>💝</span>
+                        </div>
+                        <span class="footer-text">8 days · 8 promises · 1 forever</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- CELEBRATION PORTAL -->
+    <div class="celebration-portal" id="celebrationPortal">
+        <div class="portal-content">
+            <div class="gold-lines"></div>
+            <h1 class="portal-title">yayyyyyyyyyyyy, she said YES</h1>
+            <div class="portal-sub">Valentines week is nothing that special cause no way i m giving u all the priority only a specific week, for me everyday is valentines day with u.... My alur bosta....</div>
+            <div class="portal-hearts">
+                <span>❤️</span><span>💖</span><span>💘</span><span>💝</span>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="confettiCanvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 3000; display: none;"></canvas>
+
+    <script>
+        // ===========================================
+        // VALENTINE'S WEEK 2026 - MAIN SCRIPT
+        // SINGLE FILE - EVERYTHING WORKS
+        // ===========================================
+
+        (function() {
+            'use strict';
+
+            // =======================================
+            // CUSTOMIZATION CONFIG - EDIT THIS SECTION
+            // =======================================
+            const CONFIG = {
+                // YOUR PHOTOS - REPLACE THESE URLs
+                photos: {
+                    mainMemory: "file:///C:/Users/rupas/Downloads/WhatsApp%20Image%202026-01-30%20at%2022.43.33.jpeg",
+                    smallMemory1: "file:///D:/clear/New%20folder/safe%20place/save%20it%20up/1000122213.jpg",
+                    smallMemory2: "https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=600"
+                },
+
+                // SECRET NOTES - RANDOM QUOTES
+                secretQuotes: [
+                    "From the moment I met you, my world became brighter.",
+                    "You're the reason I started to believe in love again.",
+                    "You are my favourite notification and always going to be.",
+                    "I still get butterflies. Every. Single. Time.",
+                    "You're my today and all of my tomorrows.",
+                    "You made me feel soo confortable than of anyone else.",
+                    "You make my heart smile.",
+                    "Forever would never be long enough with you.",
+                    "In your eyes, I found my favorite place to be.",
+                    "You are my greatest adventure. and the only adventure i am willing to go for"
+                ],
+
+                // DAY 1: ROSE DAY - 7 FEB
+                day1: {
+                    message: "A single rose for one of the most cutest person to ever exist. You bloom in my heart every single day.",
+                    quote: "\"Like a rose, you make everything beautiful and gooo burrrrr\"",
+                    gift: "eternal bloom"
+                },
+
+                // DAY 2: PROPOSE DAY - 8 FEB
+                day2: {
+                    message: "If I had to propose someone a million times, I'd choose you in every single freaking time.",
+                    quote: "\"You are my always and forever.\"",
+                    gift: "a promise"
+                },
+
+                // DAY 3: CHOCOLATE DAY - 9 FEB
+                day3: {
+                    message: "Ouuuu someones being Sweet like chocolate, but sometimessss a bit more like jhal lonka 🌶 , kiddinggggggg......",
+                    quote: "\"You're the sweetness I crave daily.\"",
+                    gift: "sweet love"
+                },
+
+                // DAY 4: TEDDY DAY - 10 FEB
+                day4: {
+                    message: "hmmmmm Someones Soft like a teddy, cute like a teddy , adorable like a teddy but is real unfamiliar with that... thats unfair",
+                    quote: "\"Cuddle buddies for life.\"",
+                    gift: "huggable"
+                },
+
+                // DAY 5: PROMISE DAY - 11 FEB
+                day5: {
+                    message: "I promise to choose you, to cherish you, even single day till we end up in death bed :).",
+                    quote: "\"Pinky promise: forever.\"",
+                    gift: "sealed with love"
+                },
+
+                // DAY 6: HUG DAY - 12 FEB
+                day6: {
+                    message: "Idk about hug.",
+                    quote: "\"Free hugs for life — just for you.\"",
+                    gift: "warm embrace"
+                },
+
+                // DAY 7: KISS DAY - 13 FEB
+                day7: {
+                    message: "If i am not your but u are my first kiss even if its in cheeks but yaaaaa it was my first kiss 😋😋.",
+                    quote: "\"Sealed with a kiss.\"",
+                    gift: "sweetest kiss"
+                },
+
+                // DAY 8: VALENTINE'S DAY - 14 FEB
+                day8: {
+                    message: "Today, tomorrow, and every day after — it's always been you. and always going to be you only....",
+                    quote: "\"You are my valentine, forever.\"",
+                    gift: "my heart"
+                }
+            };
+
+            // =======================================
+            // DOM ELEMENTS
+            // =======================================
+            const card = document.getElementById('card');
+            const waxSeal = document.getElementById('waxSeal');
+            const yesBtn = document.getElementById('yesBtn');
+            const noBtn = document.getElementById('noBtn');
+            const celebrationPortal = document.getElementById('celebrationPortal');
+            const openQuoteBtn = document.getElementById('openQuoteBtn');
+            const quoteContainer = document.getElementById('floatingQuoteContainer');
+            const quoteClose = document.getElementById('quoteClose');
+            const quoteMessageEl = document.getElementById('floatingQuoteMessage');
+            const countdownEl = document.getElementById('countdown');
+
+            // =======================================
+            // INITIALIZATION
+            // =======================================
+            function init() {
+                loadCustomizations();
+                setupDayCards();
+                attachEventListeners();
+                updateCountdown();
+                setInterval(updateCountdown, 60000);
+            }
+
+            // =======================================
+            // LOAD CUSTOMIZATIONS
+            // =======================================
+            function loadCustomizations() {
+                // Load photos
+                if (CONFIG.photos) {
+                    const mainImg = document.getElementById('mainMemoryImage');
+                    if (mainImg) mainImg.src = CONFIG.photos.mainMemory;
+                    
+                    const small1 = document.getElementById('smallMemoryImage1');
+                    if (small1) small1.src = CONFIG.photos.smallMemory1;
+                    
+                    const small2 = document.getElementById('smallMemoryImage2');
+                    if (small2) small2.src = CONFIG.photos.smallMemory2;
+                }
+
+                // Load day messages
+                for (let i = 1; i <= 8; i++) {
+                    const day = CONFIG[`day${i}`];
+                    if (day) {
+                        const msgEl = document.getElementById(`dayMessage${i}`);
+                        if (msgEl) msgEl.textContent = day.message;
+                        
+                        const quoteEl = document.getElementById(`dayQuote${i}`);
+                        if (quoteEl) quoteEl.textContent = day.quote;
+                        
+                        const giftEl = document.getElementById(`dayGift${i}`);
+                        if (giftEl) giftEl.textContent = day.gift;
+                    }
+                }
+            }
+
+            // =======================================
+            // SETUP DAY CARDS - CLICK TO EXPAND
+            // =======================================
+            function setupDayCards() {
+                const dayCards = document.querySelectorAll('.day-card');
+                
+                dayCards.forEach(card => {
+                    const header = card.querySelector('.day-header');
+                    
+                    header.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        
+                        // Close other cards
+                        dayCards.forEach(c => {
+                            if (c !== card && c.classList.contains('expanded')) {
+                                c.classList.remove('expanded');
+                            }
+                        });
+                        
+                        // Toggle current card
+                        card.classList.toggle('expanded');
+                    });
+                });
+            }
+
+            // =======================================
+            // EVENT LISTENERS
+            // =======================================
+            function attachEventListeners() {
+                // Open letter - FIXED: Using correct ID and event
+                if (waxSeal) {
+                    waxSeal.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        card.classList.add('flipped');
+                    });
+                }
+
+                // YES button
+                if (yesBtn) {
+                    yesBtn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        activateCelebration();
+                    });
+                }
+
+                // NO button - moves away
+                if (noBtn) {
+                    noBtn.addEventListener('mouseenter', moveNoButton);
+                    noBtn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        moveNoButton();
+                    });
+                }
+
+                // Open floating quote
+                if (openQuoteBtn) {
+                    openQuoteBtn.addEventListener('click', showRandomQuote);
+                }
+
+                // Close quote
+                if (quoteClose) {
+                    quoteClose.addEventListener('click', function() {
+                        quoteContainer.classList.remove('active');
+                    });
+                }
+
+                // Close quote when clicking outside
+                window.addEventListener('click', function(e) {
+                    if (quoteContainer.classList.contains('active') && 
+                        !quoteContainer.contains(e.target) && 
+                        !openQuoteBtn.contains(e.target)) {
+                        quoteContainer.classList.remove('active');
+                    }
+                });
+            }
+
+            // =======================================
+            // FLOATING QUOTE - RANDOM MESSAGE
+            // =======================================
+            function showRandomQuote() {
+                const quotes = CONFIG.secretQuotes;
+                const randomIndex = Math.floor(Math.random() * quotes.length);
+                
+                if (quoteMessageEl) {
+                    quoteMessageEl.textContent = quotes[randomIndex];
+                }
+                quoteContainer.classList.add('active');
+            }
+
+            // =======================================
+            // COUNTDOWN TO VALENTINE'S DAY
+            // =======================================
+            function updateCountdown() {
+                if (!countdownEl) return;
+                
+                const today = new Date();
+                const valentines2026 = new Date('February 14, 2026');
+                const diffTime = valentines2026 - today;
+                
+                if (diffTime > 0) {
+                    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+                    countdownEl.textContent = `${diffDays} days until V-Day 💘`;
+                } else {
+                    countdownEl.textContent = `It's Valentine's Week! 💝`;
+                }
+            }
+
+            // =======================================
+            // NO BUTTON - PLAYFUL ESCAPE
+            // =======================================
+            function moveNoButton() {
+                if (!noBtn) return;
+                
+                const x = Math.random() * (window.innerWidth - noBtn.offsetWidth - 50);
+                const y = Math.random() * (window.innerHeight - noBtn.offsetHeight - 50);
+                
+                noBtn.style.position = 'fixed';
+                noBtn.style.left = `${Math.max(10, x)}px`;
+                noBtn.style.top = `${Math.max(10, y)}px`;
+                noBtn.style.zIndex = '9999';
+                
+                const texts = ['not yet?', 'try again?', 'maybe?', 'click yes!'];
+                const randomText = texts[Math.floor(Math.random() * texts.length)];
+                noBtn.innerHTML = `<span class="btn-text">${randomText}</span>`;
+            }
+
+            // =======================================
+            // CELEBRATION - SHE SAID YES!
+            // =======================================
+            function activateCelebration() {
+                celebrationPortal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                
+                // Launch confetti
+                startConfetti();
+                
+                setTimeout(() => {
+                    celebrationPortal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }, 8000);
+            }
+
+            // =======================================
+            // CONFETTI
+            // =======================================
+            function startConfetti() {
+                const canvas = document.getElementById('confettiCanvas');
+                canvas.style.display = 'block';
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+                
+                const ctx = canvas.getContext('2d');
+                const particles = [];
+                
+                for (let i = 0; i < 150; i++) {
+                    particles.push({
+                        x: Math.random() * canvas.width,
+                        y: Math.random() * canvas.height - canvas.height,
+                        size: Math.random() * 8 + 4,
+                        speedY: Math.random() * 5 + 3,
+                        speedX: Math.random() * 2 - 1,
+                        color: ['#ff718d', '#ff8da1', '#ffc1cc', '#d4af37'][Math.floor(Math.random() * 4)]
+                    });
+                }
+                
+                function animate() {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    
+                    particles.forEach(p => {
+                        p.y += p.speedY * 0.2;
+                        p.x += p.speedX * 0.2;
+                        
+                        ctx.fillStyle = p.color;
+                        ctx.fillRect(p.x, p.y, p.size, p.size * 0.6);
+                    });
+                    
+                    requestAnimationFrame(animate);
+                }
+                
+                animate();
+                
+                setTimeout(() => {
+                    canvas.style.display = 'none';
+                }, 8000);
+            }
+
+            // =======================================
+            // START EVERYTHING
+            // =======================================
+            window.addEventListener('DOMContentLoaded', init);
+        })();
+    </script>
+</body>
+</html>
