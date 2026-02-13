@@ -959,18 +959,21 @@
 
                     <!-- PHOTO MOSAIC - YOUR MEMORIES -->
                     <div class="memory-mosaic">
-<img src="images/us1.jpg.jpeg" 
-     alt="Us together" 
-     class="memory-image"
-     id="mainMemoryImage">
+                        <div class="mosaic-item main-memory">
+                            <img src="https://images.unsplash.com/photo-1522673607200-164d1b3ce470?w=600" 
+                                 alt="Us together" 
+                                 class="memory-image"
+                                 id="mainMemoryImage">
+                            <div class="image-overlay">
                                 <span class="overlay-icon">❤️</span>
                             </div>
                         </div>
                         <div class="mosaic-item small-memory">
-<img src="images/us2.jpg.jpeg" 
-     alt="Romantic moment" 
-     class="memory-image"
-     id="smallMemoryImage1">
+                            <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=600" 
+                                 alt="Romantic moment" 
+                                 class="memory-image"
+                                 id="smallMemoryImage1">
+                            <div class="image-overlay">
                                 <span class="overlay-icon">🌹</span>
                             </div>
                         </div>
@@ -1233,9 +1236,10 @@
             const CONFIG = {
                 // YOUR PHOTOS - REPLACE THESE URLs
                 photos: {
-photos: {
-    mainMemory: "images/us1.jpg.jpeg",
-    smallMemory1: "images/us2.jpg.jpeg"
+                    photos: {
+  mainMemory: '<img src="images/us1.jpg" alt="Us together">',
+  smallMemory1: '<img src="images/us2.jpg" alt="Romantic moment">',
+},
                     smallMemory2: "https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=600"
                 },
 
@@ -1561,6 +1565,4 @@ photos: {
         })();
     </script>
 </body>
-
 </html>
-
